@@ -16,7 +16,7 @@ function InfluencerLoading() {
         aria-label="loading"
       >
       </div>
-      <span className="sr-only h-5">Loading Influencer page ...</span>
+      <span className="sr-only">Loading Influencer page ...</span>
     </div>
   );
 }

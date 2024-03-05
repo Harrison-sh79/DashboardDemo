@@ -14,7 +14,7 @@ function AdminLoading() {
         role="status"
         aria-label="loading"
       >
-        <span>Admin Loading...</span>
+        <span className="sr-only">Admin Loading...</span>
       </div>
   )
 }

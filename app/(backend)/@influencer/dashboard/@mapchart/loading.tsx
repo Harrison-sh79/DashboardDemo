@@ -21,7 +21,7 @@ function InfluencerDashboardMapChartLoading() {
         role="status"
         aria-label="loading"
       >
-        <span>Influencer Dashboard MapChart ...</span>
+        <span className="sr-only">Influencer Dashboard MapChart ...</span>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ function MerchantLoading() {
         role="status"
         aria-label="loading"
       >
-        <span>Merchant Loading...</span>
+        <span className="sr-only">Merchant Loading...</span>
       </div>
   )
 }
