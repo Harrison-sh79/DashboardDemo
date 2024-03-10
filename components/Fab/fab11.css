@@ -1,0 +1,45 @@
+html {
+    background: #000;
+    color: white;
+    font-family: Roboto;
+    font-size: 1.5em;
+    overflow: hidden;
+  }
+  
+  #floating_action_button {
+    background: #3498db;
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transition: all 2s;
+  }
+  
+  #floating_action_button:active {
+    background: #2980b9;
+  }
+  
+  #floating_action_button:target {
+    background: white;
+    width: 200vw;
+    height: 200vw;
+    border-radius: 100vw;
+    top: calc(-100vw - 50px);
+    left: calc(-50vw - 50px);
+  }
+  
+  #floating_action_button> span {
+    position: fixed;
+    font-size: 2.3em;
+    font-weight: 600;
+    top: calc(50% - 0.6em);
+    left: calc(50% - 0.1em);
+  }
+  
+  a { 
+    color: white;
+    text-decoration: none;
+  }
