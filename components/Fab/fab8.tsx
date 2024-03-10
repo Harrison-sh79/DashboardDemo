@@ -1,6 +1,7 @@
 import React from "react";
+// import { IonIcon } from '@ionic/react';
+// import { logoIonic } from 'ionicons/icons';
 import "./fab8.scss"
-
 import "./fab8.jsx"
 
 function Fab8() {
@@ -11,25 +12,25 @@ function Fab8() {
   <div className="floating-action-button">
     
     <div className="share-btn">
-      <ion-icon id="share-icon" name="share-social"></ion-icon>
-      <ion-icon id="close-icon" name="close-sharp"></ion-icon>
+      {/* <ion-icon id="share-icon" name="share-social"></ion-icon>
+      <ion-icon id="close-icon" name="close-sharp"></ion-icon> */}
     </div>
     
     <ul>
       <li>
-        <ion-icon name="logo-twitter"></ion-icon>
+        {/* <ion-icon name="logo-twitter"></ion-icon> */}
       </li>
       <li>
-        <ion-icon name="logo-facebook"></ion-icon>
+        {/* <ion-icon name="logo-facebook"></ion-icon> */}
       </li>
       <li>
-        <ion-icon name="logo-whatsapp"></ion-icon>
+        {/* <ion-icon name="logo-whatsapp"></ion-icon> */}
       </li>
       <li>
-        <ion-icon name="send-sharp"></ion-icon>
+        {/* <ion-icon name="send-sharp"></ion-icon> */}
       </li>
       <li>
-        <ion-icon name="logo-instagram"></ion-icon>
+        {/* <ion-icon name="logo-instagram"></ion-icon> */}
       </li>
     </ul>
     
