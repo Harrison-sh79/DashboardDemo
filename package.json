@@ -56,6 +56,7 @@
     "@slate-serializers/html": "^2.1.6",
     "@tanstack/react-table": "^8.13.2",
     "@udecode/cn": "^29.0.1",
+    "@udecode/plate": "^30.9.1",
     "@udecode/plate-alignment": "^30.5.3",
     "@udecode/plate-autoformat": "^30.5.3",
     "@udecode/plate-basic-marks": "^30.5.3",

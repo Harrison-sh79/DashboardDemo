@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { cn } from "@udecode/cn";
 import { CommentsProvider } from "@udecode/plate-comments";
+import { usePlateActions } from "@udecode/plate";
 import {
   Plate,
   PlateProps,
@@ -12,6 +13,9 @@ import {
   createPlateEditor,
   useEditorSelector,
   SerializeHtml,
+  withPlate,
+  createTEditor,
+  Value,
 } from "@udecode/plate-common";
 import { ELEMENT_PARAGRAPH } from "@udecode/plate-paragraph";
 import { DndProvider } from "react-dnd";
@@ -34,6 +38,8 @@ import { z } from "zod";
 // import { slateToHtml, payloadSlateToHtmlConfig } from "@slate-serializers/html";
 import { htmlSerialize, getTableInfo } from "@/lib/serializer/slate-to-html";
 import parse from "html-react-parser";
+import ChatGPTButton from "../email/chatgpt";
+import { ToolbarGroup } from "../plate-ui/toolbar";
 
 export default function PlateEditor({
   form,
@@ -50,12 +56,33 @@ export default function PlateEditor({
     },
   ];
 
+  const [editorInput, setEditorInput] = React.useState(initialValue);
+  // const editor = useEditorRef();
+
+  // usePlateActions("1").value(newValue)
+  // usePlateActions("1").plugins(plugins)
+  // usePlateActions("1").editableProps(editableProps)
+  // usePlateActions("1").resetEditor()
+  // usePlateActions("1").redecorate()
+
+  // const updateEditorValue = (value: Value) => {
+  //   const newEditor = withPlate(createTEditor(), { id: "1", plugins })
+  //   usePlateActions("1").value(String(value))
+  //   usePlateActions("1").editor(newEditor)
+  // }
+
+  // React.useEffect(() => {
+  //   console.log(editorInput)
+  //   editorRef.reset();
+  // }, [editorInput]);
+
   return (
     <DndProvider backend={HTML5Backend}>
       <CommentsProvider users={commentsUsers} myUserId={myUserId}>
         <Plate
           plugins={plugins}
-          initialValue={initialValue}
+          // initialValue={initialValue}
+          value={[...editorInput]}
           onChange={(value) => {
             form.setValue("html", htmlSerialize(value));
             form.setValue("style", getTableInfo());
@@ -70,7 +97,7 @@ export default function PlateEditor({
             )}
           >
             <FixedToolbar>
-              <FixedToolbarButtons />
+              <FixedToolbarButtons form={form} setEditorInput={setEditorInput} />
             </FixedToolbar>
 
             <Editor

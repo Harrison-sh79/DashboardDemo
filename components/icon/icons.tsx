@@ -59,6 +59,7 @@ import {
   Twitter,
   Underline,
   Ungroup,
+  Sparkles,
   WrapText,
   X,
 } from 'lucide-react';
@@ -212,6 +213,7 @@ export const Icons = {
   row: RectangleHorizontal,
   search: Search,
   settings: Settings,
+  sparkles: Sparkles,
   strikethrough: Strikethrough,
   subscript: Subscript,
   superscript: Superscript,

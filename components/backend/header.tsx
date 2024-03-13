@@ -23,6 +23,7 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import MailInboxModal from "../email/mail-inbox-modal";
+import DigitalWallet from "../wallet/digital-wallet";
 function Header({ topmenus }: { topmenus: TopMenusType[] | undefined }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -93,6 +94,7 @@ function Header({ topmenus }: { topmenus: TopMenusType[] | undefined }) {
         </div>
         <MailInboxModal />
         <ModeToggle />
+        <DigitalWallet />
         <div className=" h-10 p-[4px] border border-violet-800/10  dark:border-violet-800 rounded-full flex flex-row justify-center items-center gap-1">
           <div>
             <UserButton

@@ -55,7 +55,7 @@ type SliderProps = {
           value={localValues}
           onValueChange={handleValueChange}
           className={cn(
-            "relative flex w-full touch-none select-none mb-6 items-center",
+            "relative flex w-full h-full touch-none select-none mb-6 items-center",
             className
           )}
           {...props}
@@ -66,10 +66,10 @@ type SliderProps = {
           {localValues.map((value, index) => (
             <React.Fragment key={index}>
               <div
-                className="absolute text-center"
+                className="absolute"
                 style={{
-                  left: `calc(${((value - min) / (max - min)) * 100}% + 0px)`,
-                  top: `10px`,
+                  left: `calc(${((value - min) / (max - min)) * 100}% - 5px)`,
+                  top: `25px`,
                 }}
               >
                 <span className="text-sm">
